@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" id="meta-description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" id="og-site-name" content="">
+  <meta property="og:image" content="images/ogimage.png">
+  <meta name="theme-color" id="theme-color" content="">
+  <title id="page-title"></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="images/android-chrome-256x256.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap">
+  <style>
+    :root {
+      --gradient: linear-gradient(to bottom, #434343 0%, #000000 100%);
+      --dark-color: #303030;
+      --main-color: #000000;
+      --main-color-transparent: #00000026;
+      --mockup-color: rgba(255, 255, 255, 0.3);
+    }
+
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Ubuntu', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-image: var(--gradient);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+      min-width: 320px;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== Header ===== */
+    .header {
+      width: 100%;
+      min-width: 320px;
+      padding: 30px 40px;
+      position: relative;
+    }
+
+    .header__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 15px;
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    .header__logo {
+      display: flex;
+      align-items: center;
+      margin-right: initial;
+    }
+
+    .header__logo-image {
+      max-width: 100%;
+      max-height: 160px;
+    }
+
+    @media (max-width: 420px) {
+      .header { padding: 30px 10px; }
+    }
+
+    @media (min-width: 420px) {
+      .header { padding: 30px 0 50px; }
+      .header__container { padding: 0 30px; }
+    }
+
+    @media (min-width: 768px) {
+      .header {
+        flex: 0 0 auto;
+        margin: 0 auto;
+        padding: 30px 0 10px;
+        max-width: 768px;
+      }
+    }
+
+    @media (min-width: 1024px) { .header { max-width: 1024px; } }
+    @media (min-width: 1380px) { .header { max-width: 1380px; } }
+    @media (min-width: 1680px) { .header { max-width: 1680px; } }
+    @media (min-width: 2560px) { .header { max-width: 2560px; padding-top: 60px; } }
+
+    /* ===== Main ===== */
+    .main {
+      margin-top: auto;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .main__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      margin: auto auto 0;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      min-width: 320px;
+      max-width: 1280px;
+      padding: 0 15px;
+    }
+
+    .main__content {
+      margin: 0 auto 50px;
+      width: 100%;
+      padding: 0;
+      position: relative;
+    }
+
+    .main__heading {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+
+    .main__title {
+      font-size: 29px;
+      line-height: 35px;
+      font-weight: 500;
+      margin: 0 0 15px;
+      text-align: center;
+    }
+
+    .main__subtitle {
+      font-size: 16px;
+      font-weight: 400;
+      margin: 0;
+      line-height: 25px;
+      text-align: center;
+      letter-spacing: -0.3px;
+      padding-right: 0;
+    }
+
+    @media (min-width: 420px) {
+      .main__heading { margin-bottom: 25px; }
+      .main__title { font-size: 35px; line-height: 40px; margin-bottom: 20px; }
+      .main__subtitle { letter-spacing: 0.3px; }
+      .main__wrapper { padding: 0 25px; }
+    }
+
+    @media (min-width: 768px) {
+      .main { overflow: visible; }
+      .main__wrapper {
+        margin: 0 auto;
+        flex: 1 1 auto;
+        min-height: 323px;
+        max-width: 768px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 30px;
+      }
+      .main__content {
+        margin: 0;
+        width: 50%;
+        padding-right: 20px;
+      }
+      .main__heading { width: 100%; }
+      .main__subtitle {
+        letter-spacing: 0.2px;
+        padding: 0;
+        margin: 0 0 50px;
+      }
+    }
+
+    @media (min-width: 1024px) { .main__wrapper { max-width: 1024px; } }
+    @media (min-width: 1380px) {
+      .main__wrapper { max-width: 1380px; }
+      .main__title { font-size: 45px; line-height: 50px; margin: 0 0 25px; }
+      .main__subtitle { font-size: 20px; line-height: 30px; padding-right: 50px; }
+    }
+    @media (min-width: 1680px) {
+      .main__wrapper { max-width: 1680px; }
+      .main__title { font-size: 60px; line-height: 60px; margin: 0 0 30px; }
+      .main__subtitle { font-size: 25px; line-height: 35px; padding-right: 120px; margin: 0 0 65px; }
+    }
+    @media (min-width: 2560px) {
+      .main__wrapper { max-width: 2560px; }
+      .main__title { font-size: 90px; line-height: 1.06; margin: 0 0 40px; }
+      .main__subtitle { font-size: 40px; line-height: 1.38; }
+      .main__heading { margin-bottom: 50px; }
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      width: 100%;
+      min-width: 320px;
+      margin-top: auto;
+    }
+
+    .footer__container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 15px 30px;
+    }
+
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contacts-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contacts-container__wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .contacts-container__text {
+      display: block;
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 15px;
+      color: #fff;
+      opacity: 0.7;
+      text-align: center;
+    }
+
+    .contacts-container__text:hover {
+      opacity: 1;
+    }
+
+    .e-mail {
+      opacity: 0.7;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    .e-mail:hover {
+      opacity: 1;
+    }
+    .e-mail a {
+      color: #fff;
+    }
+    .footer__accreditation {
+      transition: opacity 0.2s;
+    }
+    .footer__accreditation:hover {
+      opacity: 1 !important;
+    }
+
+    .social__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-right: 0;
+    }
+
+    .social__container-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-right: 0;
+      margin-bottom: 0;
+      order: 1;
+    }
+
+    .social__button-wrapper {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .social__button-wrapper:last-child {
+      margin-right: 0;
+    }
+
+    .social__button-wrapper path {
+      fill: #fff;
+      transition: all ease-in-out 0.2s;
+    }
+
+    .social__button-wrapper:hover path {
+      fill: #ccc;
+    }
+
+    .social__button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      transition: all ease-in-out 0.2s;
+    }
+
+    .social__button::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      opacity: 0.2;
+      background-color: #fff;
+      border-radius: 50%;
+      z-index: -1;
+      transition: all ease-in-out 0.2s;
+    }
+
+    .social__button:hover::before {
+      opacity: 0.4;
+    }
+
+    @media (min-width: 768px) {
+      .footer {
+        max-width: 768px;
+        margin: 0 auto;
+        flex: 0 0 auto;
+      }
+      .footer__container {
+        flex-direction: row;
+        padding: 30px;
+        justify-content: center;
+      }
+      .contacts {
+        margin-bottom: 0;
+        order: 2;
+      }
+      .social__container-wrapper {
+        order: 1;
+      }
+      .contacts-container {
+        align-items: flex-start;
+        justify-content: center;
+        height: 100%;
+      }
+      .contacts + .social__container-wrapper {
+        margin-right: 70px;
+      }
+    }
+
+    @media (min-width: 1024px) { .footer { max-width: 1024px; } }
+    @media (min-width: 1380px) { .footer { max-width: 1380px; } }
+    @media (min-width: 1680px) { .footer { max-width: 1680px; } }
+    @media (min-width: 2560px) { .footer { max-width: 2560px; } }
+
+    @media (min-width: 0) and (max-width: 767px) {
+      .footer__container { flex-direction: column; }
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .main__content {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .footer {
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+  </style>
+</head>
+<body>
+  <header class="header header--center-layout">
+    <div class="header__container">
+      <div class="header__logo">
+        <div class="header__logo-picture">
+          <img src="images/logo.png" data-i18n="header.logoAlt" alt="" class="header__logo-image">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main main--center-layout">
+    <div class="main__wrapper">
+      <section class="main__content">
+        <div class="main__heading">
+          <h1 class="main__title" data-i18n="main.title"></h1>
+          <p class="main__subtitle" data-i18n="main.subtitle"></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer footer--center-layout">
+    <div class="footer__container">
+      <div class="contacts">
+        <div class="contacts-container">
+          <div class="contacts-container__wrapper">
+            <span class="contacts-container__text" data-i18n="footer.address"></span>
+          </div>
+          <span class="contacts-container__text" data-i18n="footer.croNumber"></span>
+          <br>
+          <a class="contacts-container__text footer__accreditation" href="/accreditation" data-i18n="footer.accreditationLabel"></a>
+          <br>
+          <span class="e-mail" id="email-span"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    "use strict";
+
+    function getNested(obj, path) {
+      return path.split('.').reduce(function(o, k) { return o ? o[k] : undefined; }, obj);
+    }
+
+    function applyContent(data) {
+      // Meta tags
+      document.getElementById('meta-description').setAttribute('content', data.meta.description);
+      document.getElementById('og-site-name').setAttribute('content', data.meta.ogSiteName);
+      document.getElementById('theme-color').setAttribute('content', data.meta.themeColor);
+      document.title = data.title;
+
+      // Body elements with data-i18n
+      var elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(function(el) {
+        var path = el.getAttribute('data-i18n');
+        var value = getNested(data, path);
+        if (value !== undefined && value !== null) {
+          if (el.tagName === 'IMG') {
+            el.setAttribute('alt', value);
+          } else {
+            el.textContent = value;
+          }
+        }
+      });
+
+      // Email (mailto link)
+      var emailSpan = document.getElementById('email-span');
+      if (emailSpan && data.footer.email) {
+        emailSpan.innerHTML = '<a href="mailto:' + data.footer.email + '">' + data.footer.email + '</a>';
+      }
+
+      // Alignment fix from original
+      var share = document.querySelector(".share");
+      var contactsContainer = document.querySelector(".contacts-container");
+      var socialContainer = document.querySelector(".social__container");
+      if (!share && !socialContainer) {
+        contactsContainer.style.alignItems = "center";
+      }
+    }
+
+    fetch('index.json')
+      .then(function(response) { return response.json(); })
+      .then(applyContent)
+      .catch(function(err) { console.error('Failed to load content.json:', err); });
+  </script>
+</body>
+</html>
