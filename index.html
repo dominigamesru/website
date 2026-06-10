@@ -2,13 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="description" id="meta-description" content="">
+  <meta name="description" content="Доминигеймс">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" id="og-site-name" content="">
+  <meta property="og:site_name" content="Доминигеймс">
   <meta property="og:image" content="images/ogimage.png">
-  <meta name="theme-color" id="theme-color" content="">
-  <title id="page-title"></title>
+  <meta name="theme-color" content="#434343">
+  <title>Доминигеймс | Казуальные игры</title>
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="shortcut icon" href="images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -136,11 +136,25 @@
       width: 100%;
     }
 
+    .main__heading-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 15px;
+    }
+
+    .main__logo {
+      height: 96px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
     .main__title {
       font-size: 29px;
       line-height: 35px;
       font-weight: 500;
-      margin: 0 0 15px;
+      margin: 0;
       text-align: center;
     }
 
@@ -156,7 +170,8 @@
 
     @media (min-width: 420px) {
       .main__heading { margin-bottom: 25px; }
-      .main__title { font-size: 35px; line-height: 40px; margin-bottom: 20px; }
+      .main__title { font-size: 35px; line-height: 40px; }
+      .main__heading-row { margin-bottom: 20px; }
       .main__subtitle { letter-spacing: 0.3px; }
       .main__wrapper { padding: 0 25px; }
     }
@@ -188,12 +203,16 @@
     @media (min-width: 1024px) { .main__wrapper { max-width: 1024px; } }
     @media (min-width: 1380px) {
       .main__wrapper { max-width: 1380px; }
-      .main__title { font-size: 45px; line-height: 50px; margin: 0 0 25px; }
+      .main__title { font-size: 45px; line-height: 50px; }
+      .main__heading-row { margin-bottom: 25px; }
+      .main__logo { height: 130px; }
       .main__subtitle { font-size: 20px; line-height: 30px; padding-right: 50px; }
     }
     @media (min-width: 1680px) {
       .main__wrapper { max-width: 1680px; }
-      .main__title { font-size: 60px; line-height: 60px; margin: 0 0 30px; }
+      .main__title { font-size: 60px; line-height: 60px; }
+      .main__heading-row { margin-bottom: 30px; }
+      .main__logo { height: 150px; }
       .main__subtitle { font-size: 25px; line-height: 35px; padding-right: 120px; margin: 0 0 65px; }
     }
     @media (min-width: 2560px) {
@@ -211,172 +230,59 @@
     }
 
     .footer__container {
-      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
+      flex-direction: row;
+      gap: 48px;
+      padding: 24px 30px 32px;
       justify-content: center;
-      padding: 20px 15px 30px;
+      align-items: flex-start;
     }
 
-    .contacts {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .contacts-container {
+    .footer__col {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      align-items: flex-start;
     }
 
-    .contacts-container__wrapper {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-
-    .contacts-container__text {
+    .footer__line {
       display: block;
-      font-size: 15px;
-      font-weight: 500;
-      line-height: 15px;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.9;
       color: #fff;
-      opacity: 0.7;
-      text-align: center;
-    }
-
-    .contacts-container__text:hover {
-      opacity: 1;
-    }
-
-    .e-mail {
-      opacity: 0.7;
-      font-size: 15px;
-      font-weight: 500;
-    }
-    .e-mail:hover {
-      opacity: 1;
-    }
-    .e-mail a {
-      color: #fff;
-    }
-    .footer__accreditation {
+      opacity: 0.38;
       transition: opacity 0.2s;
     }
-    .footer__accreditation:hover {
-      opacity: 1 !important;
-    }
 
-    .social__container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-right: 0;
-    }
+    a.footer__line:hover { opacity: 0.7; }
 
-    .social__container-wrapper {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      margin-right: 0;
-      margin-bottom: 0;
-      order: 1;
-    }
-
-    .social__button-wrapper {
-      margin-right: 10px;
-      cursor: pointer;
-    }
-
-    .social__button-wrapper:last-child {
-      margin-right: 0;
-    }
-
-    .social__button-wrapper path {
-      fill: #fff;
-      transition: all ease-in-out 0.2s;
-    }
-
-    .social__button-wrapper:hover path {
-      fill: #ccc;
-    }
-
-    .social__button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 40px;
-      width: 40px;
-      border-radius: 50%;
-      position: relative;
-      overflow: hidden;
-      user-select: none;
-      transition: all ease-in-out 0.2s;
-    }
-
-    .social__button::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      content: '';
+    #email-span a {
+      color: #fff;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.9;
+      opacity: 0.38;
+      transition: opacity 0.2s;
       display: block;
-      width: 40px;
-      height: 40px;
-      opacity: 0.2;
-      background-color: #fff;
-      border-radius: 50%;
-      z-index: -1;
-      transition: all ease-in-out 0.2s;
     }
-
-    .social__button:hover::before {
-      opacity: 0.4;
-    }
+    #email-span a:hover { opacity: 0.7; }
 
     @media (min-width: 768px) {
-      .footer {
-        max-width: 768px;
-        margin: 0 auto;
-        flex: 0 0 auto;
-      }
-      .footer__container {
-        flex-direction: row;
-        padding: 30px;
-        justify-content: center;
-      }
-      .contacts {
-        margin-bottom: 0;
-        order: 2;
-      }
-      .social__container-wrapper {
-        order: 1;
-      }
-      .contacts-container {
-        align-items: flex-start;
-        justify-content: center;
-        height: 100%;
-      }
-      .contacts + .social__container-wrapper {
-        margin-right: 70px;
-      }
+      .footer { max-width: 768px; margin: 0 auto; flex: 0 0 auto; }
     }
-
     @media (min-width: 1024px) { .footer { max-width: 1024px; } }
     @media (min-width: 1380px) { .footer { max-width: 1380px; } }
     @media (min-width: 1680px) { .footer { max-width: 1680px; } }
     @media (min-width: 2560px) { .footer { max-width: 2560px; } }
 
-    @media (min-width: 0) and (max-width: 767px) {
-      .footer__container { flex-direction: column; }
+    @media (max-width: 480px) {
+      .footer__container { gap: 32px; padding: 20px 20px 28px; }
     }
 
     /* ===== Center layout overrides ===== */
     .main--center-layout .main__wrapper {
       flex-direction: column;
+      padding-top: 40px;
     }
     .main--center-layout .main__content {
       width: 100%;
@@ -414,94 +320,132 @@
     .footer {
       animation: fadeInUp 1s ease-out 0.3s both;
     }
+
+    /* ===== Carousel ===== */
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      padding: 32px 0 40px;
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, #000 8%, #000 92%, transparent 100%);
+      animation: fadeInUp 1s ease-out 0.15s both;
+    }
+
+    .carousel__track {
+      display: flex;
+      gap: 14px;
+      width: max-content;
+      animation: carousel-scroll 38s linear infinite;
+    }
+
+    .carousel__icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      object-fit: cover;
+      flex-shrink: 0;
+      display: block;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    @keyframes carousel-scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 480px) {
+      .carousel__icon { width: 72px; height: 72px; border-radius: 16px; }
+      .carousel__track { gap: 12px; }
+    }
   </style>
 </head>
 <body>
-  <header class="header header--center-layout">
-    <div class="header__container">
-      <div class="header__logo">
-        <div class="header__logo-picture">
-          <img src="images/logo.png" data-i18n="header.logoAlt" alt="" class="header__logo-image">
-        </div>
-      </div>
-    </div>
-  </header>
-
   <main class="main main--center-layout">
     <div class="main__wrapper">
       <section class="main__content">
         <div class="main__heading">
-          <h1 class="main__title" data-i18n="main.title"></h1>
-          <p class="main__subtitle" data-i18n="main.subtitle"></p>
+          <div class="main__heading-row">
+            <img src="images/logo.png" alt="Доминигеймс" class="main__logo">
+            <h1 class="main__title">Доминигеймс</h1>
+          </div>
+          <p class="main__subtitle">Разработчик интеллектуальных казуальных игр</p>
         </div>
       </section>
+      <div class="carousel">
+      <div class="carousel__track">
+        <img class="carousel__icon" src="images/games/0FVi5fpeoFXKZKnFXftteNYTSQRG8NE671XcBDDQ.jpg" alt="">
+        <img class="carousel__icon" src="images/games/0ikZiLOITS2C790Umal0OZE8GaayCs3CSiYFBron.png" alt="">
+        <img class="carousel__icon" src="images/games/1vP1UvtzfnpvDShSFYoCruXPZL7l9qLfIz7h1ORK.png" alt="">
+        <img class="carousel__icon" src="images/games/24iSSlv291vJiC2rRCQTQBU47MpjCjGXXJO9vj9r.jpg" alt="">
+        <img class="carousel__icon" src="images/games/2jIxxXYyyjJCfEejuJ96mQxVGTSVdIwi2xvapzf0.png" alt="">
+        <img class="carousel__icon" src="images/games/31D8AoykJMU3EzV8As5uG1qxKpCeq6jqkp8HCCJz.png" alt="">
+        <img class="carousel__icon" src="images/games/383SekXDJRtqj9jNOkVHBGSoQnG1q9AETQG7Bocm.png" alt="">
+        <img class="carousel__icon" src="images/games/9LkBbes1DZsIX9100lDjCZyDrbOgQ7rjhewpK4MZ.png" alt="">
+        <img class="carousel__icon" src="images/games/9QE69xuOqEy5G7EnkwDouzwetYbQcxRw5ngNy0bS.png" alt="">
+        <img class="carousel__icon" src="images/games/A6RjZ55jy6W6u7dCe0BSDMIu3eWIRCbDyb0o28FE.png" alt="">
+        <img class="carousel__icon" src="images/games/AQivGoU1ugZ9TDDnHJsqOrpAEI6qZyIuC0osVuq4.png" alt="">
+        <img class="carousel__icon" src="images/games/kKiiXipHEV8Xfrx1TGMcnaoROVjWe1oM6xcqvSVK.png" alt="">
+        <img class="carousel__icon" src="images/games/kVaUGDwle4kGppw9Cj1AjZhyekQvEPmoWzJrIWja.png" alt="">
+        <img class="carousel__icon" src="images/games/kWZBYLV6ewwfyJmKh4V9bkabiPzR4ZtziZA3qprY.png" alt="">
+        <img class="carousel__icon" src="images/games/kaoKuk4vrP9Z8khpRgp4BWSHeimUsVgKgglgQ3OW.jpg" alt="">
+        <img class="carousel__icon" src="images/games/kpV2vcFg46TMg4T37FDLyyMQd2yZlSNWOdXKmQ6f.png" alt="">
+        <img class="carousel__icon" src="images/games/l6M5p29xhtzomRvf5KynNyr60F4FDLhuJDeCA82c.png" alt="">
+        <img class="carousel__icon" src="images/games/lAqrY6sv9VuoGxvlosnM2NSyQFsvRk3x4vQOLLNT.png" alt="">
+        <img class="carousel__icon" src="images/games/mcKeEDsscnHrkkhM6vQQY8y0Hk59n5jMbgP3o27E.png" alt="">
+        <img class="carousel__icon" src="images/games/nXPx4MxEhxuqGX1hc3duyJtcN5CTXN1XJN7uyzMB.png" alt="">
+        <img class="carousel__icon" src="images/games/niLgrQGkF3bx9paJ9VkhaqUCRk2rsuw6sNRayKxX.png" alt="">
+        <img class="carousel__icon" src="images/games/r0f9xYESMinb6qOgPJMQYU4rWGSFOToLSYSX4u6h.png" alt="">
+        <img class="carousel__icon" src="images/games/yJZIAXtdXuXQpY0vU0bxc8P4zOAXYus9aUMEYB1e.png" alt="">
+        <img class="carousel__icon" src="images/games/zCtGXjsuka76WWg78L1rRJPdDZWqoiBvN19LzXsM.png" alt="">
+        <img class="carousel__icon" src="images/games/zkAmBYY2FQeLfuFxvkCJjLEEbgwHh1PkB3wOYOOk.png" alt="">
+        <!-- duplicate for seamless loop -->
+        <img class="carousel__icon" src="images/games/0FVi5fpeoFXKZKnFXftteNYTSQRG8NE671XcBDDQ.jpg" alt="">
+        <img class="carousel__icon" src="images/games/0ikZiLOITS2C790Umal0OZE8GaayCs3CSiYFBron.png" alt="">
+        <img class="carousel__icon" src="images/games/1vP1UvtzfnpvDShSFYoCruXPZL7l9qLfIz7h1ORK.png" alt="">
+        <img class="carousel__icon" src="images/games/24iSSlv291vJiC2rRCQTQBU47MpjCjGXXJO9vj9r.jpg" alt="">
+        <img class="carousel__icon" src="images/games/2jIxxXYyyjJCfEejuJ96mQxVGTSVdIwi2xvapzf0.png" alt="">
+        <img class="carousel__icon" src="images/games/31D8AoykJMU3EzV8As5uG1qxKpCeq6jqkp8HCCJz.png" alt="">
+        <img class="carousel__icon" src="images/games/383SekXDJRtqj9jNOkVHBGSoQnG1q9AETQG7Bocm.png" alt="">
+        <img class="carousel__icon" src="images/games/9LkBbes1DZsIX9100lDjCZyDrbOgQ7rjhewpK4MZ.png" alt="">
+        <img class="carousel__icon" src="images/games/9QE69xuOqEy5G7EnkwDouzwetYbQcxRw5ngNy0bS.png" alt="">
+        <img class="carousel__icon" src="images/games/A6RjZ55jy6W6u7dCe0BSDMIu3eWIRCbDyb0o28FE.png" alt="">
+        <img class="carousel__icon" src="images/games/AQivGoU1ugZ9TDDnHJsqOrpAEI6qZyIuC0osVuq4.png" alt="">
+        <img class="carousel__icon" src="images/games/kKiiXipHEV8Xfrx1TGMcnaoROVjWe1oM6xcqvSVK.png" alt="">
+        <img class="carousel__icon" src="images/games/kVaUGDwle4kGppw9Cj1AjZhyekQvEPmoWzJrIWja.png" alt="">
+        <img class="carousel__icon" src="images/games/kWZBYLV6ewwfyJmKh4V9bkabiPzR4ZtziZA3qprY.png" alt="">
+        <img class="carousel__icon" src="images/games/kaoKuk4vrP9Z8khpRgp4BWSHeimUsVgKgglgQ3OW.jpg" alt="">
+        <img class="carousel__icon" src="images/games/kpV2vcFg46TMg4T37FDLyyMQd2yZlSNWOdXKmQ6f.png" alt="">
+        <img class="carousel__icon" src="images/games/l6M5p29xhtzomRvf5KynNyr60F4FDLhuJDeCA82c.png" alt="">
+        <img class="carousel__icon" src="images/games/lAqrY6sv9VuoGxvlosnM2NSyQFsvRk3x4vQOLLNT.png" alt="">
+        <img class="carousel__icon" src="images/games/mcKeEDsscnHrkkhM6vQQY8y0Hk59n5jMbgP3o27E.png" alt="">
+        <img class="carousel__icon" src="images/games/nXPx4MxEhxuqGX1hc3duyJtcN5CTXN1XJN7uyzMB.png" alt="">
+        <img class="carousel__icon" src="images/games/niLgrQGkF3bx9paJ9VkhaqUCRk2rsuw6sNRayKxX.png" alt="">
+        <img class="carousel__icon" src="images/games/r0f9xYESMinb6qOgPJMQYU4rWGSFOToLSYSX4u6h.png" alt="">
+        <img class="carousel__icon" src="images/games/yJZIAXtdXuXQpY0vU0bxc8P4zOAXYus9aUMEYB1e.png" alt="">
+        <img class="carousel__icon" src="images/games/zCtGXjsuka76WWg78L1rRJPdDZWqoiBvN19LzXsM.png" alt="">
+        <img class="carousel__icon" src="images/games/zkAmBYY2FQeLfuFxvkCJjLEEbgwHh1PkB3wOYOOk.png" alt="">
+      </div>
+    </div>
     </div>
   </main>
 
-  <footer class="footer footer--center-layout">
+
+  <footer class="footer">
     <div class="footer__container">
-      <div class="contacts">
-        <div class="contacts-container">
-          <div class="contacts-container__wrapper">
-            <span class="contacts-container__text" data-i18n="footer.address"></span>
-          </div>
-          <span class="contacts-container__text" data-i18n="footer.croNumber"></span>
-          <br>
-          <a class="contacts-container__text footer__accreditation" href="accreditation/" data-i18n="footer.accreditationLabel"></a>
-          <br>
-          <span class="e-mail" id="email-span"></span>
-        </div>
+      <div class="footer__col">
+        <span class="footer__line">394018, Воронежская область, г Воронеж, ул Свободы, д. 77б</span>
+        <span class="footer__line">ОГРН 1207300002722, ИНН 7328105173, КПП 366501001</span>
+        <a class="footer__line" href="mailto:info@dominigames.ru">info@dominigames.ru</a>
+      </div>
+      <div class="footer__col">
+        <a class="footer__line" href="terms/">Условия использования</a>
+        <a class="footer__line" href="privacy-policy/">Политика конфиденциальности</a>
+        <a class="footer__line" href="accreditation/">Данные для аккредитации в Минцифре</a>
+        <span class="footer__line">© Доминигеймс, 2020 – 2026</span>
       </div>
     </div>
   </footer>
 
-  <script>
-    "use strict";
-
-    function getNested(obj, path) {
-      return path.split('.').reduce(function(o, k) { return o ? o[k] : undefined; }, obj);
-    }
-
-    function applyContent(data) {
-      // Meta tags
-      document.getElementById('meta-description').setAttribute('content', data.meta.description);
-      document.getElementById('og-site-name').setAttribute('content', data.meta.ogSiteName);
-      document.getElementById('theme-color').setAttribute('content', data.meta.themeColor);
-      document.title = data.title;
-
-      // Body elements with data-i18n
-      var elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(function(el) {
-        var path = el.getAttribute('data-i18n');
-        var value = getNested(data, path);
-        if (value !== undefined && value !== null) {
-          if (el.tagName === 'IMG') {
-            el.setAttribute('alt', value);
-          } else {
-            el.textContent = value;
-          }
-        }
-      });
-
-      // Email (mailto link)
-      var emailSpan = document.getElementById('email-span');
-      if (emailSpan && data.footer.email) {
-        emailSpan.innerHTML = '<a href="mailto:' + data.footer.email + '">' + data.footer.email + '</a>';
-      }
-
-      // Alignment fix from original
-      var share = document.querySelector(".share");
-      var contactsContainer = document.querySelector(".contacts-container");
-      var socialContainer = document.querySelector(".social__container");
-      if (!share && !socialContainer) {
-        contactsContainer.style.alignItems = "center";
-      }
-    }
-
-    fetch('index.json')
-      .then(function(response) { return response.json(); })
-      .then(applyContent)
-      .catch(function(err) { console.error('Failed to load content.json:', err); });
-  </script>
 </body>
 </html>
