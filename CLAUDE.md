@@ -4,7 +4,7 @@ Static website of ООО «ДОМИНИГЕЙМС» (dominigames.ru). Plain HTML
 
 ## Structure
 - `index.html` — landing: logo, subtitle, infinite CSS carousel of game icons (`images/games/`, list is duplicated for the seamless loop), footer with requisites and links to legal pages.
-- `accreditation/index.html` — data for Минцифры IT accreditation: requisites, bank account, contacts, ОКВЭД, IT-activity codes (12.01, 22.01), tech stack, registry entry, services and pricing.
+- `accreditation/index.html` — data for Минцифры IT accreditation: requisites, bank account, contacts, ОКВЭД, IT-activity codes (12.01, 22.01), tech stack, services and pricing.
 - `privacy-policy/index.html`, `terms/index.html` — legal documents with `Редакция от …` date.
 - Each page is self-contained: its own `<style>`, BEM classes (`header__…`, `main__…`, `footer__…`), Ubuntu font from Google Fonts, dark theme (`#000` background, white text with opacity). Subpages link back with `../`.
 
